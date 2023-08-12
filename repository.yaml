@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: HAP Lock
+url: 'https://github.com/guilhermelirio/hap-lock-homeassistant'
+maintainer: Guilherme Lirio Tomasi de Oliveira <guilhermelirio@gmail.com>

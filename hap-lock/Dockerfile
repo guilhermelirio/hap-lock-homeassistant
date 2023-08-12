@@ -9,7 +9,7 @@ ENV LANG C.UTF-8
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk add --no-cache \
-    nodejs@16.13.2 \
+    nodejs \
     npm \
     git
 

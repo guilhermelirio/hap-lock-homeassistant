@@ -5,8 +5,11 @@ FROM node:${NODE_VERSION}-alpine AS node
 
 FROM alpine:${ALPINE_VERSION}
 
+ENV LANG C.UTF-8
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 RUN apk add --no-cache \
-    nodejs \
+    nodejs@16.13.2 \
     npm \
     git
 

@@ -1,6 +1,6 @@
 {
   "name": "hap_lock_homeassistant",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Integração ao HomeKit de Fechadura com Cartão NFC",
   "main": "lock.js",
   "scripts": {

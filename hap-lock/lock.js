@@ -15,9 +15,9 @@ const accessory = new Accessory("NFC Lock", accessoryUuid);
 accessory
   .getService(Service.AccessoryInformation)
   // .setCharacteristic(Characteristic.HardwareFinish, "AQT///8A")
-  .setCharacteristic(Characteristic.Manufacturer, options.device.manufacturer)
+  .setCharacteristic(Characteristic.Manufacturer, 'DuGui')
   .setCharacteristic(Characteristic.Model, "NFCLock")
-  .setCharacteristic(Characteristic.SerialNumber, options.device.serialNumber)
+  .setCharacteristic(Characteristic.SerialNumber, '12345678')
   //.setCharacteristic(Characteristic.FirmwareRevision, require('./package.json').version);
   .setCharacteristic(Characteristic.FirmwareRevision, require('./package.json').version);
 

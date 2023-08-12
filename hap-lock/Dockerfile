@@ -1,5 +1,6 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
+FROM --platform=$TARGETPLATFORM node:16.13.2
 
 ENV LANG C.UTF-8
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]

@@ -1,8 +1,12 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+ARG NODE_VERSION=16.11.1
+ARG ALPINE_VERSION=3.14
+
+FROM node:${NODE_VERSION}-alpine AS node
+
+FROM alpine:${ALPINE_VERSION}
 
 RUN apk add --no-cache \
-    nodejs@16.13.2 \
+    nodejs \
     npm \
     git
 

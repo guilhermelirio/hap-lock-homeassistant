@@ -1,5 +1,5 @@
-# Define a imagem base com suporte para múltiplas plataformas
-FROM --platform=$TARGETPLATFORM node:16.13.2
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 # Define o diretório de trabalho
 WORKDIR /app

@@ -5,7 +5,8 @@ const optionsFromfile = JSON.parse(rawOptions)
 const options = {
     device: {
         manufacturer: optionsFromfile.device_manufacturer,
-        serialNumber: optionsFromfile.device_serial_number
+        serialNumber: optionsFromfile.device_serial_number,
+        name: optionsFromfile.device_name
     }
 
 }

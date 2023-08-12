@@ -10,14 +10,14 @@ const options = require('./options.js');
 // hap.HAPStorage.setCustomStoragePath("...");
 
 const accessoryUuid = hap.uuid.generate("hap.examples.lock-nfc");
-const accessory = new Accessory("NFC Lock", accessoryUuid);
+const accessory = new Accessory(options.device.name, accessoryUuid);
 
 accessory
   .getService(Service.AccessoryInformation)
   // .setCharacteristic(Characteristic.HardwareFinish, "AQT///8A")
-  .setCharacteristic(Characteristic.Manufacturer, 'DuGui')
+  .setCharacteristic(Characteristic.Manufacturer, options.device.manufacturer)
   .setCharacteristic(Characteristic.Model, "NFCLock")
-  .setCharacteristic(Characteristic.SerialNumber, '12345678')
+  .setCharacteristic(Characteristic.SerialNumber, options.device.serialNumber)
   //.setCharacteristic(Characteristic.FirmwareRevision, require('./package.json').version);
   .setCharacteristic(Characteristic.FirmwareRevision, require('./package.json').version);
 

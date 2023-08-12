@@ -1,6 +1,6 @@
 name: 'HAP Lock'
 description: 'Integração ao HomeKit de Fechadura com Cartão NFC'
-version: '0.0.5'
+version: '0.0.6'
 slug: 'hap_lock_homeassistant'
 init: false
 arch:
@@ -10,9 +10,11 @@ arch:
   - armv7
   - i386
 options:
+  device_name: ''
   device_manufacturer: ''
   device_serial_number: ''
 
 schema:
+  device_name: str
   device_manufacturer: str
   device_serial_number: str

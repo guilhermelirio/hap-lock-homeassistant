@@ -2,4 +2,5 @@
 
 echo "Initialing..."
 
+node -v
 npm start 

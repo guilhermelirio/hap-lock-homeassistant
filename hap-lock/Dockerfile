@@ -1,17 +1,13 @@
 ARG BUILD_FROM
-ARG NODE_VERSION=16.11.1
-ARG ALPINE_VERSION=3.14
-
-FROM node:${NODE_VERSION}-alpine AS node
-FROM alpine:${ALPINE_VERSION}
 FROM $BUILD_FROM
-
 
 ENV LANG C.UTF-8
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk add --no-cache \
-    nodejs \
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.15/main" >> /etc/apk/repositories \
+    && echo "http://dl-cdn.alpinelinux.org/alpine/v3.15/community" >> /etc/apk/repositories \
+    && apk add --no-cache \
+    nodejs=16.20.1-r0 \
     npm \
     git
 

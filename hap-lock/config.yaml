@@ -1,6 +1,6 @@
 name: 'HAP Lock'
 description: 'Integração ao HomeKit de Fechadura com Cartão NFC'
-version: '0.1.8'
+version: '0.2.0'
 slug: 'hap_lock_homeassistant'
 init: false
 arch:

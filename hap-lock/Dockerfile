@@ -1,7 +1,11 @@
 ARG BUILD_FROM
+ARG NODE_VERSION=16.11.1
+ARG ALPINE_VERSION=3.14
+
+FROM node:${NODE_VERSION}-alpine AS node
+FROM alpine:${ALPINE_VERSION}
 FROM $BUILD_FROM
-# Use uma imagem base do Node.js
-FROM node:16
+
 
 ENV LANG C.UTF-8
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]

@@ -15,12 +15,19 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.15/main" >> /etc/apk/repositor
 WORKDIR /app
 
 # Copia os arquivos necessários para o container
-COPY package*.json ./
-COPY . .
-COPY node_modules ./node_modules
+COPY package.json /
+COPY node_modules /
+COPY dist /
+COPY src /
+COPY @types /
+COPY lock.js /
+COPY options.js /
+COPY options.json /
 
 # Expõe a porta utilizada pela aplicação
 EXPOSE 47169
 
-# Define o comando para iniciar a aplicação
-CMD [ "npm", "start" ]
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]

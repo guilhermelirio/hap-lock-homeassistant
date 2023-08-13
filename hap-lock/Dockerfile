@@ -1,4 +1,11 @@
-FROM alpine:3.14
+ARG BUILD_FROM
+ARG NODE_VERSION=16.11.1
+ARG ALPINE_VERSION=3.14
+
+FROM node:${NODE_VERSION}-alpine AS node
+FROM alpine:${ALPINE_VERSION}
+FROM $BUILD_FROM
+
 
 ENV LANG C.UTF-8
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]

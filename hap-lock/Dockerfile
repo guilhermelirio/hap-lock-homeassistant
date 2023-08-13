@@ -15,14 +15,14 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.15/main" >> /etc/apk/repositor
 WORKDIR /app
 
 # Copia os arquivos necessários para o container
-COPY package.json /
-COPY node_modules ./node_modules
-COPY dist ./dist
-COPY src ./src
-COPY @types ./@types
-COPY lock.js /
-COPY options.js /
-COPY options.json /
+COPY package.json /app/package.json
+COPY node_modules /app/node_modules
+COPY dist /app/dist
+COPY src /app/src
+COPY @types /app/@types
+COPY lock.js /app/
+COPY options.js /app/
+COPY options.json /app/
 
 # Expõe a porta utilizada pela aplicação
 EXPOSE 47169

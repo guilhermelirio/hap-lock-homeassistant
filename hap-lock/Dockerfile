@@ -27,7 +27,7 @@ COPY node_modules ./node_modules
 WORKDIR /app
 
 # Expõe a porta utilizada pela aplicação
-EXPOSE 47169
+# EXPOSE 47169
 
 # Copy data for add-on
 COPY run.sh /

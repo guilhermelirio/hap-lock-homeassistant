@@ -16,10 +16,10 @@ WORKDIR /app
 
 # Copia os arquivos necessários para o container
 COPY package.json /
-COPY node_modules /
-COPY dist /
-COPY src /
-COPY @types /
+COPY node_modules ./node_modules
+COPY dist ./dist
+COPY src ./src
+COPY @types ./@types
 COPY lock.js /
 COPY options.js /
 COPY options.json /

@@ -1,7 +1,7 @@
 {
     "name": "HAP Lock",
     "description": "Integração ao HomeKit de Fechadura com Cartão NFC",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "slug": "hap_lock_homeassistant",
     "startup": "application",
     "boot": "auto",
@@ -14,9 +14,10 @@
       "i386"
     ],
     "options": {
-      "device_name": "",
-      "device_manufacturer": "",
-      "device_serial_number": ""
+      "device_name": "Fechadura",
+      "device_manufacturer": "Action Tecnologia e Sistemas",
+      "device_serial_number": "00000001",
+      "code": "678-90-876"
     },
     "schema": {
       "device_name": "str",

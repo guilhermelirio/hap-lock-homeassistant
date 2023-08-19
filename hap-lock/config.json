@@ -1,7 +1,7 @@
 {
     "name": "HAP Lock",
     "description": "Integração ao HomeKit de Fechadura com Cartão NFC",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "slug": "hap_lock_homeassistant",
     "startup": "application",
     "boot": "auto",
@@ -17,12 +17,6 @@
       "device_name": "",
       "device_manufacturer": "",
       "device_serial_number": ""
-    },
-    "ports": {
-      "47169/tcp": 47169
-    },
-    "ports_description": {
-      "47169/tcp": "Lock tcp-listen port"
     },
     "schema": {
       "device_name": "str",
